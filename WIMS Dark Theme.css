@@ -1,0 +1,312 @@
+@import url(https://fonts.googleapis.com/css?family=Open\+Sans&display=swap);
+:root {
+    --wims_bgcolor: #252525;
+    --wims_link_color: #F69330;
+    --wims_vlink_color: #c67627;
+    --wims_hlink_color: #95591d;
+    --wims_ref_menucolor: #4b4a61;
+    --wims_ref_bgcolor: #252525;
+    --wims_ref_button_color: #303030;
+    --wims_ref_button_bgcolor: #a66322;
+    font-family: open sans;
+}
+body {
+    margin: unset;
+    padding: unset;
+}
+html:not(:hover), body:not(:hover){
+    background-color: #252525;
+}
+
+a {
+    color: #F69330;
+}
+a:hover, a:focus, a:visited {
+    color: #a66322;
+}
+
+
+
+#wimstopbox, #wimsmenubox, #wimsmenumodubox, .wims_title_seq {
+    background-color: #303030;    
+}
+#wimstopbox a {
+    background-color: #404040;
+    border-radius: 5px;
+    padding: 0px 5px 2px 7px;
+}
+#wimstopbox span {
+    margin: 5px
+}
+#wimsmenumodubox {
+    border-radius: 10px 10px 0px 0px;
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    padding: 0px 0px 45px 0px;
+    background-color: #303030
+}
+
+fieldset#searchform.wims_search_engine {
+    border-radius: 10px
+}
+
+div.wimsmenu.menu {
+    background-color: #0000 !important;
+}
+h2.menu_title {
+    padding: 0px 0px 0px 15px
+}
+
+table.wimstable td, table.wimstable .odd td {
+    border: unset;
+    padding: 2px;
+}
+table.wimstable {
+    border-collapse: unset
+}
+
+div #TABLE_portal caption {
+    background-color: #454545;
+    color: #e1e1e1;
+    border-radius: 5px
+}
+
+div.wims_content p {
+    line-height: 1.5
+}
+
+#wimspagebox div form div, legend, fieldset.property_fields.halfwidth.blockcenter  {
+    border-radius: 5px;
+    padding: 10px
+}
+
+.fullwidth input[type="text"], .fullwidth textarea, .fullwidth select {
+    width: unset; 
+}
+
+/* Het menu onderaan copyrightspul */
+.wimstail a {
+    background-color: #0000;
+    color: #7C82F0
+}
+.wimsmanager a, .wimstail, .wimsmenu {
+    background-color: #303030 !important;
+    color: #cecece
+}
+table.wimscenter.wimstail {
+    position: fixed;
+    bottom: 0;
+    width: 99.9%;
+    padding: 0px 0px 2px 0px
+}
+
+table#TABLE_portal.wimstable.wimscenter {
+    width: 100%;
+    max-width: 1000px;
+    border: 5px solid #303030
+}
+.wimstable.wimscenter {
+    border-radius: 10px;
+    background-color: #404040 !important
+}
+table.wimstable {
+    border: unset;
+    padding: 3px
+}
+table.wimstable td, table.wimstable .odd td {
+    background-color: #303030;
+    border-radius: 5px;
+    padding: 5px;
+}
+hr {
+    width: 99% !important;
+    background-color: #303030 !important;
+    display: none !important
+    /* display: none */
+}
+.breadcrumbs {
+    background-color: #353535;
+    border-color: #303030;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.breadcrumbs li {
+    color: #FFF;
+}
+
+.breadcrumbs>li>a {
+    color: #F69330;
+    text-decoration: unset;
+}
+
+/* WIMS Schaersvoorde en de tekst van de tabel*/
+h2 {
+    
+    color: #FFF;
+}
+
+div#visitor_home.wimsmenu {
+    padding:1px 0px;
+    width: 99%;
+    background-color: #252525 !important
+}
+div#visitor_home.wimsmenu div.float_left {
+    position: fixed;
+}
+div.wimsmenu {
+    width: 99%;
+    padding: 1px 0px;
+}
+
+.wimsmenu .wimstable, table.wimstable th a, table.wimstable a{
+    color: #F69330;
+}
+.wimsmenu a {
+    color: #F69330;
+}
+
+table.wimstable td, table.wimstable .odd td {
+    background-color: #303030;
+}
+
+/* MAIN in het midden */
+body.main_body {
+    background-color: #252525;
+    background-image: unset;
+    color: #FFF;
+}
+
+.wims_button, .wims_button a, input[type="button"], input[type="submit"] {
+    color: #7c82f0;
+    border-color: #7c82f0;
+}
+
+.property_fields .field:nth-child(even),
+.property_fields .field:nth-child(odd) {
+    background-color: #353535;
+}
+
+/* Layout Fixes */
+table.wims_table {
+    width: 99% !important;
+}
+table.wims_table tbody tr td {
+    width: 99.7%;
+    position: fixed;
+    bottom: 0;
+    padding: 0px 0px 25px 0px
+}
+.wimsbody p small {
+    position: fixed;
+    bottom: 6px;
+    width: auto;
+    left: 0;
+    right: 0
+}
+
+/* werkbladen pagina */
+table.wims_user_exam_table {
+    border-radius: 5px;
+    background-color: #303030
+}
+
+table.wims_user_sheet_table {
+    padding: 20px 5px 5px 5px;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.wims_sheet_score {
+    background-color: #303030;
+    border-radius: 5px;
+    padding: 5px;
+    border: unset;
+}
+.wims_sheet_list{
+        margin-bottom: 180px;
+}
+div#wimspagebox .wimsbody img{
+    border-radius: 10px;
+    margin: 5px
+}
+
+div.wims_title_seq {
+    background-color: #0000;
+    color: #FFF;
+    padding: 5px
+}
+
+div.wims_classname {
+    padding: 5px
+}
+
+div.wimsbody table thead tr th {
+    background-color: #454545;
+    color: #e1e1e1;
+    border-radius: 5px
+}
+
+/* In opgave */
+div.menuitem.score {
+    background-color: #0000;
+    color: #FFF;
+    border: 0px
+}
+tr td #show_it tbody, td table tbody tr, #show_it tbody td {
+    color: black;
+}
+#exercise tr td img {
+    filter: invert(100%);
+}
+
+td table.exercise {
+    padding: 0px 0px 10px 0px
+}
+td.exercise_c, div table tbody tr td table tbody tr td {
+    background-color: #404040;
+    border-radius: 10px;
+    padding: 0px 15px 0px 15px;
+    color: #FFF
+}
+div table {
+    background-color: #0000 !important
+}
+
+.zebra_table_h2 tbody tr:nth-of-type(odd) {
+    background: #404040;
+}
+#exercise tbody tr #use_inputs table tbody {
+    border-radius: 5px;
+    color: #FFF
+}
+#exercise tbody tr #use_inputs table tbody tr td {
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px
+}
+#exercise tbody tr td a span {
+    color: orange !important;
+    font-style: italic
+}
+#exercise, tr td.exercise_t {
+    background-color: #404040;
+    border-radius: 10px;
+    padding: 10px
+}
+span.schaersvoorde_link {
+    color: unset;
+}
+
+tbody tr td.exercise_m textarea, div #schaersvoorde_exercise #send_buttons input {
+    border-radius: 10px;
+    padding: 5px 10px 5px 5px
+}
+tbody tr td input#time {
+    border-radius: 10px;
+    padding: 3px 0px 3px 3px
+}
+
+#exercise tbody tr td #no_id0 span.katex-display {
+    background-color: #404040 !important;
+    padding: 10px
+}
