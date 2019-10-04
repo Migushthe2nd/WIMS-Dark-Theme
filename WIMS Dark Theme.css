@@ -13,9 +13,18 @@
 body {
     margin: unset;
     padding: unset;
+    padding: 0px 0px 120px 0px;
 }
-html:not(:hover), body:not(:hover){
+html:not(:hover), body {
     background-color: #252525;
+}
+
+html {
+padding: 0px 0px 80px 0px;
+}
+
+div.wimsbody:last-child {
+    padding: 0px 0px 0px 0px;
 }
 
 a {
@@ -25,14 +34,13 @@ a:hover, a:focus, a:visited {
     color: #a66322;
 }
 
-
-
 #wimstopbox, #wimsmenubox, #wimsmenumodubox, .wims_title_seq {
     background-color: #303030;    
 }
 #wimstopbox a {
     background-color: #404040;
     border-radius: 5px;
+    border: 1px;
     padding: 0px 5px 2px 7px;
 }
 #wimstopbox span {
@@ -41,21 +49,24 @@ a:hover, a:focus, a:visited {
 #wimsmenumodubox {
     border-radius: 10px 10px 0px 0px;
     position: fixed;
-    bottom: 50px;
     width: 100%;
-    padding: 0px 0px 45px 0px;
-    background-color: #303030
+    bottom: 20px;
+    padding: 0px 0px 50px 0px;
+    background-color: #303030;
 }
 
 fieldset#searchform.wims_search_engine {
-    border-radius: 10px
+    border-radius: 10px;
+    display: none
 }
 
 div.wimsmenu.menu {
     background-color: #0000 !important;
 }
 h2.menu_title {
-    padding: 0px 0px 0px 15px
+    padding: 0px 0px 0px 15px;
+    margin-block-start: 0.60em;
+    margin-block-end: 0.0em;
 }
 
 table.wimstable td, table.wimstable .odd td {
@@ -78,7 +89,13 @@ div.wims_content p {
 
 #wimspagebox div form div, legend, fieldset.property_fields.halfwidth.blockcenter  {
     border-radius: 5px;
-    padding: 10px
+    padding: 10px;
+    
+}
+
+#wimspagebox div form div fieldset.property_fields.halfwidth.blockcenter, fieldset.property_fields.halfwidth.blockcenter {
+    background-color: #353535;
+    margin-bottom: 70px;
 }
 
 .fullwidth input[type="text"], .fullwidth textarea, .fullwidth select {
@@ -93,6 +110,17 @@ div.wims_content p {
 .wimsmanager a, .wimstail, .wimsmenu {
     background-color: #303030 !important;
     color: #cecece
+}
+.wimstail {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.wimstail.wimstech .tailitem{
+    padding: 0px 0px 5px 0px
+}
+.wimstable.wimscenter {
+    margin-bottom: 48px
 }
 table.wimscenter.wimstail {
     position: fixed;
@@ -148,14 +176,24 @@ h2 {
 
 div#visitor_home.wimsmenu {
     padding:1px 0px;
-    width: 99%;
+    width: 100%;
     background-color: #252525 !important
 }
 div#visitor_home.wimsmenu div.float_left {
-    position: fixed;
+    position: absolute;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(data:image/jpeg;base64,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) no-repeat;
+    width: 197px; /* Width of new image */
+    height: 256px; /* Height of new image */
+    margin: 20px
+}
+div#visitor_home.wimsmenu div.float_left img {
+    display: none
 }
 div.wimsmenu {
-    width: 99%;
+    width: 100%;
     padding: 1px 0px;
 }
 
@@ -195,7 +233,8 @@ table.wims_table tbody tr td {
     width: 99.7%;
     position: fixed;
     bottom: 0;
-    padding: 0px 0px 25px 0px
+    padding: 0px 0px 25px 0px;
+    
 }
 .wimsbody p small {
     position: fixed;
@@ -207,28 +246,55 @@ table.wims_table tbody tr td {
 
 /* werkbladen pagina */
 table.wims_user_exam_table {
-    border-radius: 5px;
-    background-color: #303030
+    border-radius: 10px;
+    background-color: #353535;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table.wims_user_sheet_table {
     padding: 20px 5px 5px 5px;
-    border-spacing: 10px;
+    border-spacing: 2px;
     border-collapse: separate;
+    max-width: 1000px;
+    margin-left:auto; 
+    margin-right:auto;
+}
+.wims_user_sheet_table tbody tr td {
+    background-color: #404040 !important;
+    border-radius: 10px;
+    padding: 10px
+}
+.wims_user_sheet_table tbody tr td.wims_user_sheet_expire {
+    display: none
+}
+.wims_user_sheet_table tbody tr td.wims_user_sheet_score {
+    background-color: #303030 !important;
+}
+.wims_user_sheet_table tbody tr td:last-child {
+    display: none
+}
+
+.wims_user_myscore {
+    padding: 10px !important;
 }
 
 .wims_sheet_score {
-    background-color: #303030;
+    background-color: #0000;
     border-radius: 5px;
     padding: 5px;
     border: unset;
 }
 .wims_sheet_list{
-        margin-bottom: 180px;
+    margin-bottom: 10px;
 }
 div#wimspagebox .wimsbody img{
     border-radius: 10px;
-    margin: 5px
+    margin: 5px;
+}
+#wimspagebox div table.wims_table tbody tr td:first-child {
+    background-color: #353535;
+    border-radius: 10px 10px 0px 0px;
 }
 
 div.wims_title_seq {
@@ -269,9 +335,6 @@ td.exercise_c, div table tbody tr td table tbody tr td {
     padding: 0px 15px 0px 15px;
     color: #FFF
 }
-div table {
-    background-color: #0000 !important
-}
 
 .zebra_table_h2 tbody tr:nth-of-type(odd) {
     background: #404040;
@@ -309,5 +372,33 @@ tbody tr td input#time {
 #exercise tbody tr td #no_id0 span.katex-display {
     background-color: #404040 !important;
     padding: 10px
+}
+
+#wimsmenumodubox .menuitem.score {
+    margin-bottom: 30px
+}
+
+/* examen */
+div#exam_status.exam_instructions.wims_msg.info {
+    background-color: #353535;
+    border-radius: 10px
+}
+
+.wims_exam .exo_item {
+    box-sizing: content-box;
+    margin-right: 2em;
+    margin-bottom: .5em;
+    width: 16em;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #0000;
+    background-image: linear-gradient(to left,#404040 0,#303030 100%);
+    border-top: unset;
+    border-left: unset;
+}
+
+/* cijfers */
+div#wimspagebox div.wimstrap:last-child {
+    padding: 0px 0px 50px 0px;
 }
 }
