@@ -1,0 +1,31 @@
+{
+  "name": "WIMS Dark Theme",
+  "description": "A Dark Theme for WIMS",
+  "author": "Migush#4096",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "DARK WIMS!"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "match_about_blank": true,
+      "matches": [
+        "http://wims-schaersvoorde.nl/*",
+        "http://85.148.206.56/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+          "content/background.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}

@@ -1,4 +1,3 @@
-@-moz-document domain("85.148.206.56"), domain("wims-schaersvoorde.nl") {
 :root {
     --wims_bgcolor: #252525;
     --wims_link_color: #F69330;
@@ -13,20 +12,25 @@
 body {
     margin: unset;
     padding: unset;
-    padding: 0px 0px 120px 0px;
+    padding: 0px 0px 0px 0px;
+
 }
 html:not(:hover), body {
     background-color: #252525;
 }
 
 html {
-padding: 0px 0px 80px 0px;
+    padding: 0px 0px 0px 0px;
+    margin: unset;
+    font-size: 100%;
 }
 
 div.wimsbody:last-child {
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 40px 0px;
 }
-
+div.wimsbody {
+    padding: unset;
+}
 a {
     color: #F69330;
 }
@@ -46,13 +50,17 @@ a:hover, a:focus, a:visited {
 #wimstopbox span {
     margin: 5px
 }
-#wimsmenumodubox {
+body.main_body #wimsbodybox #wimspagebox div.wimsbody nav#wimsmenumodubox {
     border-radius: 10px 10px 0px 0px;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 20px;
-    padding: 0px 0px 50px 0px;
+    bottom: 0px;
+    padding: 0px 0px 0px 0px;
     background-color: #303030;
+}
+
+nav#wimsmenumodubox div.menuitem.score {
+    display: none;
 }
 
 fieldset#searchform.wims_search_engine {
@@ -64,8 +72,11 @@ div.wimsmenu.menu {
     background-color: #0000 !important;
 }
 h2.menu_title {
-    padding: 0px 0px 0px 15px;
-    margin-block-start: 0.60em;
+    padding: 0px 0px 0px 10px;
+    margin-block-start: 0.35em;
+    margin-block-end: 0.0em;
+}
+h1.wims_title {
     margin-block-end: 0.0em;
 }
 
@@ -90,12 +101,18 @@ div.wims_content p {
 #wimspagebox div form div, legend, fieldset.property_fields.halfwidth.blockcenter  {
     border-radius: 5px;
     padding: 10px;
-    
+}
+
+div#wimspagebox {
+    padding: 0px 0px 0px 0px;
 }
 
 #wimspagebox div form div fieldset.property_fields.halfwidth.blockcenter, fieldset.property_fields.halfwidth.blockcenter {
     background-color: #353535;
-    margin-bottom: 70px;
+}
+
+#wimspagebox div.wimsbody fieldset.property_fields.halfwidth.blockcenter {
+    margin-bottom: 50px
 }
 
 .fullwidth input[type="text"], .fullwidth textarea, .fullwidth select {
@@ -112,7 +129,7 @@ div.wims_content p {
     color: #cecece
 }
 .wimstail {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -123,10 +140,11 @@ div.wims_content p {
     margin-bottom: 48px
 }
 table.wimscenter.wimstail {
-    position: fixed;
+    position: relative;
     bottom: 0;
-    width: 99.9%;
-    padding: 0px 0px 2px 0px
+    width: 100%;
+    /*padding: 0px 0px 2px 0px; */
+    border-radius: 0px 0px 10px 10px
 }
 
 table#TABLE_portal.wimstable.wimscenter {
@@ -137,6 +155,7 @@ table#TABLE_portal.wimstable.wimscenter {
 .wimstable.wimscenter {
     border-radius: 10px;
     background-color: #404040 !important
+        
 }
 table.wimstable {
     border: unset;
@@ -151,7 +170,6 @@ hr {
     width: 99% !important;
     background-color: #303030 !important;
     display: none !important
-    /* display: none */
 }
 .breadcrumbs {
     background-color: #353535;
@@ -182,12 +200,11 @@ div#visitor_home.wimsmenu {
 div#visitor_home.wimsmenu div.float_left {
     position: absolute;
     display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     background: url(data:image/jpeg;base64,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) no-repeat;
     width: 197px; /* Width of new image */
     height: 256px; /* Height of new image */
-    margin: 20px
+    background-size: 50%;
+    margin: 20px;
 }
 div#visitor_home.wimsmenu div.float_left img {
     display: none
@@ -234,7 +251,7 @@ table.wims_table tbody tr td {
     position: fixed;
     bottom: 0;
     padding: 0px 0px 25px 0px;
-    
+    /* display: none */
 }
 .wimsbody p small {
     position: fixed;
@@ -250,6 +267,15 @@ table.wims_user_exam_table {
     background-color: #353535;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.wims_user_info {
+    top: 0.5em;
+}
+
+.wims_exo_item {
+    background-color: #353535;
+    background-image: unset
 }
 
 table.wims_user_sheet_table {
@@ -313,6 +339,14 @@ div.wimsbody table thead tr th {
     border-radius: 5px
 }
 
+#wimspagebox div div div.wims_score_bar {
+    display: none;
+}
+
+div.wimsbody form div.wims_form div {
+    background-color: unset !important;
+}
+
 /* In opgave */
 div.menuitem.score {
     background-color: #0000;
@@ -334,6 +368,9 @@ td.exercise_c, div table tbody tr td table tbody tr td {
     border-radius: 10px;
     padding: 0px 15px 0px 15px;
     color: #FFF
+}
+td.exercise_m {
+    background-color: unset;
 }
 
 .zebra_table_h2 tbody tr:nth-of-type(odd) {
@@ -364,6 +401,14 @@ tbody tr td.exercise_m textarea, div #schaersvoorde_exercise #send_buttons input
     border-radius: 10px;
     padding: 5px 10px 5px 5px
 }
+div#send_buttons.embedded_central {
+    padding: 10px;
+    margin-bottom: 130px;
+}
+div.wimsbody div#schaersvoorde_exercise p {
+    padding: 0px 0px 10px 0px !important;
+}
+
 tbody tr td input#time {
     border-radius: 10px;
     padding: 3px 0px 3px 3px
@@ -376,6 +421,110 @@ tbody tr td input#time {
 
 #wimsmenumodubox .menuitem.score {
     margin-bottom: 30px
+}
+
+div#alarmtext {
+    padding: 5px;
+    color: #FFF !important;
+    background-color: #404040 !important;
+    border-radius: 10px;
+}
+input#schaersvoorde_confirm_ok_button, input#schaersvoorde_confirm_nok_button {
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 5px
+}
+
+#alarmtext span tt li {
+    background-color: #303030;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+div.wimsbody div table {
+    background: #0000 !important;
+}
+tbody tr td font {
+    color: #FFF !important;
+    padding: 5px
+}
+
+div .wims_msg.warning {
+    background-color: #303030;
+    border-radius: 10px
+}
+
+div.wims_class_motd a font {
+    color: #3285ff
+}
+
+#answer tbody tr td div div {
+    color: #47e045;
+}
+
+#answer tbody tr td.answer_t {
+    border: unset;
+    border-style: solid;
+    border-color: lightgreen;
+    border-radius: 10px;
+    background-color: #353535;
+    font-size: 90%
+}
+
+span span span.katex-html {
+    background-color: #404040 !important;
+    padding: 20px 20px 20px 20px;
+    border-radius: 7px
+}
+
+#exercise tbody tr td span div {
+    z-index: 50;
+}
+
+span.katex-display {
+    border-radius: 10px
+}
+
+body.user_error {
+    color: #FFF;
+}
+
+body.user_error p.actions input {
+    color: #FFF;
+}
+
+#schaersvoorde_exercise #answer tbody tr td hr {
+    display: block !important;
+}
+#schaersvoorde_exercise #answer tbody tr td span {
+    color: #47e045;
+}
+
+div.wimsbody div#schaersvoorde_exercise p {
+    padding: 0px 0px 70px 0px;
+    /* margin-top: -5em; */
+    margin-bottom: 0em
+}
+
+div.wimsbody div#schaersvoorde_exercise #exercise p  {
+    padding: 0px 0px 70px 0px;
+    margin-top: 0em !important;
+    margin-bottom: 0em !important
+}
+
+#schaersvoorde_exercise #exercise tbody tr td table tbody tr td:empty {
+    display: none
+}
+
+table#exercise.exercise {
+    background-color: #404040 !important;
+}
+
+#answer tbody tr td.answer_t img {
+    filter: invert(100%);
+}
+#answer tbody tr td.answer_t:last-child img {
+    filter: unset;
 }
 
 /* examen */
@@ -399,6 +548,12 @@ div#exam_status.exam_instructions.wims_msg.info {
 
 /* cijfers */
 div#wimspagebox div.wimstrap:last-child {
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+#schaersvoorde_exercise textarea#stickit_area {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
